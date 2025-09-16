@@ -339,6 +339,9 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+    // This changes the opacity of Discord
+    match app-id="discord"
+    opacity 0.75 
 }
 
 // Example: block out two password managers from screen capture.
