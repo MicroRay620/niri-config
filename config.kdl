@@ -19,6 +19,8 @@ input {
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
+            options "compose:menu"
+
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -105,6 +107,11 @@ input {
     // automatically.
     position x=1280 y=0
 }
+cursor {
+    xcursor-theme "PearDarkCursors"
+    xcursor-size 24
+}
+
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
