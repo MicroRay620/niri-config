@@ -641,7 +641,9 @@ environment {
     DISPLAY ":0"
 }
 spawn-at-startup "xwayland-satellite"
+// Mouse Cursors 
+// You have to have the cursor directory in ~/.local/share/icons
 cursor {
-    xcursor-theme "PearDarkCursors"
-    xcursor-size 24
+    xcursor-theme "PearDarkCursors" // Change this to your cursor 
+    xcursor-size 24 // Change this to your size
 }
