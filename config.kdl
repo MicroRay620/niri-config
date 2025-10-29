@@ -70,14 +70,17 @@ input {
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     // focus-follows-mouse max-scroll-amount="0%"
 }
-
+cursor {
+    xcursor-theme "PearDarkCursors" // Change this to your cursor 
+    xcursor-size 24 // Change this to your size
+}
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -290,6 +293,10 @@ layout {
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
+// To have a Background I use swww-daemon
+// With the daemon I run `swww img /path/to/img`
+// Need to figure out how to do it where it changes based on time
+// Probably will be done with rust
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -643,7 +650,4 @@ environment {
 spawn-at-startup "xwayland-satellite"
 // Mouse Cursors 
 // You have to have the cursor directory in ~/.local/share/icons
-cursor {
-    xcursor-theme "PearDarkCursors" // Change this to your cursor 
-    xcursor-size 24 // Change this to your size
-}
+
